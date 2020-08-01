@@ -13,12 +13,12 @@ class MemeGenerator extends React.Component {
             bottomText: '',
             randomImg: "https://i.imgflip.com/345v97.jpg",
             apiImgs: [],
-            number: 4,
             formSubmitted: false,
         }
         this.handleSubmission = this.handleSubmission.bind(this)
     }
 
+    
     componentDidMount = () => {
         // used GET method to get the api url 
         axios.get(`${meme_URL}`)
