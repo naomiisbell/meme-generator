@@ -6,7 +6,7 @@ import {
   Link
 } from "react-router-dom";
 
-function App() {
+function app() {
   return (
     <Router>
       <div>
