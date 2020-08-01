@@ -1,0 +1,16 @@
+PSEUDOCODE 
+
+** Need to create react router for home page, create page, and profile page
+
+All Components >>
+
+- MemeGenerator.js
+- Header.js
+- Firebase.js 
+- MemeUpload.js
+- Posts.js
+
+** multi-page website **
+- LoginOrSignUp.js
+- MemeGenerator.js
+(components will be inside of here)
