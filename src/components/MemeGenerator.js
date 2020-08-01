@@ -13,18 +13,23 @@ class MemeGenerator extends React.Component {
         }
     }
 
-    componentDidMount() {
+    componentDidMount(memes) {
         axios.get(' https://api.imgflip.com/get_memes')
         .then(response => {
-            const { memes } = response.data
+            memes = response.data
             this.setState({ memeImgs: memes})
         })
     }
 
     render() {
         return (
-            <div>
-                
+            <div className="meme__text">
+                <form>
+                    
+                </form>
+            </div>
+            <div className="meme">
+                <img className="meme__images" src={this.state.randomImage} alt="" />
             </div>
         )
     }
