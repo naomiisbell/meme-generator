@@ -9,8 +9,8 @@ class MemeGenerator extends React.Component {
         super(props)
 
         this.state = {
-            topText: '',
-            bottomText: '',
+            topText: "",
+            bottomText: "",
             randomImg: "https://i.imgflip.com/345v97.jpg",
             apiImgs: [],
             formSubmitted: false,
@@ -24,13 +24,16 @@ class MemeGenerator extends React.Component {
         axios.get(`${meme_URL}`)
         // .then(res => res.json())
         // used .then method to make my response
-        .then(res => 
+        .then(response => {
             // response is equal to my memes variable
             // called the apiImgs property to gather the data from my empty arr
-            // const memes = res.data
+            const memes = response.data
+            console.log(response.data)
             // setState to the apiImgs prop = memes data...
-            this.setState({ apiImgs: res.data })
+            this.setState({ apiImgs: [memes] })
+        }
         )
+
         // always add .catch error message !!
         .catch(error => {
             console.log("something is wrong", error)
@@ -40,15 +43,18 @@ class MemeGenerator extends React.Component {
 
     handleSubmission = (event) => {
         event.preventDefault()
-        const randomMeme = Math.floor(Math.random() * this.state.apiImgs.length)
-        const randApiImg = this.state.apiImgs[randomMeme].url
+        const randomMeme = Math.floor(Math.random() * this.state.apiImgs[0].data.memes.length)
+        console.log(randomMeme)
+        console.log(this.state.apiImgs)
+        // console.log(this.state.apiImgs.data)
+        const randApiImg = this.state.apiImgs[0].data.memes[randomMeme].url
         this.setState({ randomImg: randApiImg })
     }
 
     render() {
         return (
             <div className="meme">
-                <form className="meme__form">
+                <form className="meme__form" onSubmit={this.handleSubmission}>
                     <Input 
                     name="topText"
                     type="text"
