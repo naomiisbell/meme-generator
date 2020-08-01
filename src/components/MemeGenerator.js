@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Input, Button } from "@material-ui/core"
 
 class MemeGenerator extends React.Component {
     constructor(){
@@ -8,7 +9,8 @@ class MemeGenerator extends React.Component {
             topText: '',
             bottomText: '',
             randomImg: "https://i.imgflip.com/345v97.jpg",
-            apiImgs: []
+            apiImgs: [],
+            formSubmitted: false,
         }
     }
 
@@ -23,10 +25,25 @@ class MemeGenerator extends React.Component {
         })
     }
 
+    
+
     render() {
         return (
             <div>
-                
+                <Input 
+                name="topText"
+                type="text"
+                placeholder="add top text"
+                value={this.state.topText}
+                />
+                <Input 
+                name="bottomText"
+                type="text"
+                placeholder="add bottom text"
+                value={this.state.bottomText}
+                />
+
+                <Button>Generate</Button>
             </div>
         )
     }
