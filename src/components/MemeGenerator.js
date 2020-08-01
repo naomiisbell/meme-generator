@@ -15,9 +15,14 @@ class MemeGenerator extends React.Component {
     }
 
     componentDidMount = () => {
+        // used GET method to get the api url 
         axios.get(`https://api.imgflip.com/get_memes`)
+        // used .then method to make my response
         .then(res => {
+            // response is equal to my memes variable
+            // called the apiImgs property to gather the data from my empty arr
             const memes = res.apiImgs.data
+            // setState to the apiImgs prop = memes data...
             this.setState({apiImgs: memes})
         })
         .catch(error => {
