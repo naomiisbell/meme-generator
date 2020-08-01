@@ -33,7 +33,6 @@ for API
 componentDidMount() {
     use axios.fetch('url')
     .then
-    .then
     const {memes} = the data and response
     this.setState({ memeImgs: memes})
 }
