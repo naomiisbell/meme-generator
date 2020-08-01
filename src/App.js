@@ -9,7 +9,7 @@ import MemeGenerator from "./components/MemeGenerator";
 
 function App() {
   return (
-      <div>
+      <div className="app">
         <MemeGenerator />
       </div>
   )
