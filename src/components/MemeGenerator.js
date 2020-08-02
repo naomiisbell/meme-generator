@@ -15,6 +15,7 @@ class MemeGenerator extends React.Component {
             apiImgs: [],
             formSubmitted: false,
         }
+        this.onTextChange = this.onTextChange.bind(this)
         this.handleSubmission = this.handleSubmission.bind(this)
     }
 
@@ -28,7 +29,7 @@ class MemeGenerator extends React.Component {
             // response is equal to my memes variable
             // called the apiImgs property to gather the data from my empty arr
             const memes = response.data
-            console.log(response.data)
+            // console.log(response.data)
             // setState to the apiImgs prop = memes data...
             this.setState({ apiImgs: [memes] })
         }
@@ -39,37 +40,54 @@ class MemeGenerator extends React.Component {
             console.log("something is wrong", error)
         })
     }
+
+    onTextChange = (event) => {
+        const {name, value} = event.target
+        this.setState({
+            [name]: value
+        })
+    }
     
 
     handleSubmission = (event) => {
         event.preventDefault()
         const randomMeme = Math.floor(Math.random() * this.state.apiImgs[0].data.memes.length)
-        console.log(randomMeme)
-        console.log(this.state.apiImgs)
+        // console.log(randomMeme)
+        // console.log(this.state.apiImgs)
         // console.log(this.state.apiImgs.data)
         const randApiImg = this.state.apiImgs[0].data.memes[randomMeme].url
-        this.setState({ randomImg: randApiImg })
+        this.setState({ 
+            randomImg: randApiImg,
+            formSubmitted: true
+            })
     }
 
     render() {
         return (
             <div className="meme">
-                <form className="meme__form" onSubmit={this.handleSubmission}>
+                <form className="meme__form">
                     <Input 
                     name="topText"
                     type="text"
                     placeholder="add top text"
                     value={this.state.topText}
+                    onChange={this.onTextChange}
                     />
                     <Input 
                     name="bottomText"
                     type="text"
                     placeholder="add bottom text"
                     value={this.state.bottomText}
+                    onChange={this.onTextChange}
                     />
 
-                    <Button onClick={this.handleSubmission}>Generate</Button>
+                    <Button
+                    type="submit"
+                    onClick={this.handleSubmission}
+                    >Generate</Button>
                 </form>
+                    <h2>{this.state.topText}</h2>
+                    <h2>{this.state.bottomText}</h2>
                     <img src={this.state.randomImg} alt=""/>
             </div>
         )
