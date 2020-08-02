@@ -1,0 +1,10 @@
+.meme {
+    padding: 50px;
+}
+
+.meme__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
