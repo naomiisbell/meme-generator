@@ -14,16 +14,17 @@ export default function App() {
     <Router>
       <div className="nav__bar">
         <h1 className="header">Meme University</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
-            <li>
-              <Link to="/create">Create a Meme</Link>
-            </li>
-          </ul>
-        </nav>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/home">Home</Link>
+              </li>
+              <li>
+                <Link to="/create">Create a Meme</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
@@ -34,11 +35,10 @@ export default function App() {
           <Route path="/create">
             <MemeGenerator />
           </Route>
-          <Route path="/home">
+          {/* <Route path="/home">
             <HomePage />
-          </Route>
+          </Route> */}
         </Switch>
-      </div>
     </Router>
   );
 }
