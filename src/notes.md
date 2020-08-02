@@ -68,4 +68,35 @@ LASTLY >>
  }
 
 
- 
+
+FOR THE LOGIN/SIGN-UP COMPONENT
+
+-I will have to create a firebase component to keep track of the users
+
+npm i firebase
+
+- the component will be functional
+- use useState and useEffect
+- set variables/properties for ....
+* open (login and sign up modal)
+* username
+* password
+* email
+* user
+
+** create useEffect function that tells whether the user is logged in or logged out setUser(null) >> user has logged out 
+
+** create sign up function that authorizes the user and creates the user with Email and Password setOpenSignUp(false) >> modal has not been opened
+
+** create the same thing but for a login function
+
+- use material UI for the sign up and login set up
+value={whatever input property you are grabbing}
+onChange={(e) => set...(e.target.value)}
+
+-the sign up button should grab the signUp function
+
+
+
+
+
