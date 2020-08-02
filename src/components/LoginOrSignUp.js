@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect }from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -47,6 +47,15 @@ const useStyles = makeStyles((theme) => ({
 
 function SignUp() {
     const classes = useStyles();
+    
+    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+
+    const signUp = (event) => {
+
+    }
 
     return (
     <Container component="main" maxWidth="xs">
@@ -69,7 +78,9 @@ function SignUp() {
                 fullWidth
                 id="firstName"
                 label="First Name"
-                autoFocus
+                // added code
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
                 />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -81,6 +92,9 @@ function SignUp() {
                 label="Last Name"
                 name="lastName"
                 autoComplete="lname"
+                // added code
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
                 />
             </Grid>
             <Grid item xs={12}>
@@ -92,6 +106,9 @@ function SignUp() {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
+                // added code
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 />
             </Grid>
             <Grid item xs={12}>
@@ -104,6 +121,9 @@ function SignUp() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                // added code
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 />
             </Grid>
             <Grid item xs={12}>
@@ -119,6 +139,7 @@ function SignUp() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={signUp}
             >
             Sign Up
             </Button>
