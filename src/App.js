@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import MemeGenerator from "./components/MemeGenerator";
 import HomePage from "./components/HomePage";
+import LoginOrSignUp from "./components/LoginOrSignUp"
 
 
 export default function App() {
@@ -23,6 +24,9 @@ export default function App() {
               <li>
                 <Link to="/create">Create a Meme</Link>
               </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
             </ul>
           </nav>
         </div>
@@ -36,9 +40,9 @@ export default function App() {
           <Route path="/create">
             <MemeGenerator />
           </Route>
-          {/* <Route path="/home">
-            <HomePage />
-          </Route> */}
+          <Route path="/login">
+            <LoginOrSignUp />
+          </Route>
         </Switch>
     </Router>
   );
