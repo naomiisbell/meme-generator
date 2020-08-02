@@ -1,4 +1,5 @@
 import React from 'react'
+import './meme.css'
 import axios from 'axios'
 import { Input, Button } from "@material-ui/core"
 
@@ -88,9 +89,11 @@ class MemeGenerator extends React.Component {
                     onClick={this.handleSubmission}
                     >Generate</Button>
                 </form>
+                <div style={{textAlign: "center"}}>
                     <h2>{this.state.topText}</h2>
                     <h2>{this.state.bottomText}</h2>
-                    <img className="meme__img" src={this.state.randomImg} alt=""/>
+                    <img className="meme__img" style={{width: 500}} src={this.state.randomImg} alt=""/>
+                </div>
             </div>
         )
     }
