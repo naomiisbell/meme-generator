@@ -1,3 +1,14 @@
+**SOURCES**
+
+https://github.com/mui-org/material-ui/blob/master/docs/src/pages/getting-started/templates/sign-up/SignUp.js
+
+https://reactrouter.com/web/guides/quick-start
+
+https://youtu.be/f7T48W0cwXM
+
+https://youtu.be/DLX62G4lc44
+
+
 PSEUDOCODE 
 
 ** Need to create react router for home page, create page, and profile page
