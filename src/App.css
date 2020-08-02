@@ -28,3 +28,6 @@ li {
   margin-right: 50px;
 }
 
+.home__cover {
+  object-fit: contain;
+}
