@@ -2,3 +2,27 @@
   margin: 0;
 }
 
+.header {
+  font-size: 25px;
+}
+
+.nav__bar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  object-fit: contain;
+  border-bottom: 1px solid;
+  font-size: 20px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  margin-right: 50px;
+}
