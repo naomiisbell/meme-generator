@@ -4,6 +4,7 @@
 
 .header {
   font-size: 25px;
+  object-fit: contain;
 }
 
 .nav__bar {
@@ -26,3 +27,4 @@ li {
   display: inline-block;
   margin-right: 50px;
 }
+
