@@ -16,7 +16,7 @@ export default function App() {
   return (
     <Router>
       <div className="nav__bar">
-        <h1 className="header">Meme University</h1>
+        <h1 className="header">mEmE uNiVeRsiTy</h1>
           <nav>
             <ul>
               <li>
@@ -35,8 +35,6 @@ export default function App() {
           </nav>
         </div>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
         <Route path="/home">
             <HomePage />
