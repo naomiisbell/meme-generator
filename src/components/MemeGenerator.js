@@ -90,7 +90,7 @@ class MemeGenerator extends React.Component {
                 </form>
                     <h2>{this.state.topText}</h2>
                     <h2>{this.state.bottomText}</h2>
-                    <img src={this.state.randomImg} alt=""/>
+                    <img className="meme__img" src={this.state.randomImg} alt=""/>
             </div>
         )
     }
