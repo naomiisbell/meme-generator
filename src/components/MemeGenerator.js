@@ -42,7 +42,9 @@ class MemeGenerator extends React.Component {
     }
 
     onTextChange = (event) => {
+        // the name and value attributes need to be grabbed in order to change the state
         const {name, value} = event.target
+        // here i set the state to the value of the Input which is whatever the user wants to type
         this.setState({
             [name]: value
         })
