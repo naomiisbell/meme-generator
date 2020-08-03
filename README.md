@@ -1,3 +1,11 @@
+### What does this application do?
+
+This website is for creating memes. You can look through a series of photos using the generate button and then screenshot your meme when finished. I originally wanted to have the users be able to login and sign up, however my firebase authentication code was not working.
+
+## Improvements
+
+I intend on getting my firebase to work and eventually added the ability for users to post their created memes.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
