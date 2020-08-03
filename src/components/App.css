@@ -45,11 +45,14 @@ li {
   text-align: center;
   margin-top: 200px;
   font-size: 70px;
+  color: #0f4c75;
+  text-shadow: 10px 5px white;
 }
 
 p {
-  font-size: 25px;
+  font-size: 50px;
   font-weight: bold;
+  text-shadow: 7px 5px white;
 }
 
 h2 {
