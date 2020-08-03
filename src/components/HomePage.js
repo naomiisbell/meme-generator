@@ -1,16 +1,12 @@
 import React from 'react'
-
+import "./App.css"
 
 class HomePage extends React.Component {
     render() {
         return (
-            <div>
-                <img 
-                className="home__cover" 
-                width= "100%" 
-                src="https://hdwallpaperim.com/wp-content/uploads/2017/08/24/113315-memes-748x421.jpg"
-                alt=""
-                />
+            <div className="home__cover">
+                <h1 className="home__header">MeMe uNiVeRsiTy</h1>
+                <p>Is your entire personality memes and vine compilations? If you answered yes... Sign Up to Meme University to be with your own kind!</p>
             </div>
         )
     }
