@@ -8,6 +8,11 @@ https://youtu.be/f7T48W0cwXM
 
 https://youtu.be/DLX62G4lc44
 
+https://youtu.be/jl-9vlEz288
+
+https://github.com/prescottprue/react-redux-firebase/issues/249
+
+https://colorhunt.co/palette/196113
 
 PSEUDOCODE 
 
