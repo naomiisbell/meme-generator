@@ -8,3 +8,7 @@
     justify-content: center;
     }
 
+.meme__message {
+    margin-top: 75px;
+    font-size: 25px;
+}
