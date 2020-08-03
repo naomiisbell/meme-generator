@@ -33,6 +33,24 @@ li {
 .home__cover {
   object-fit: contain;
   background-image: url("https://hdwallpaperim.com/wp-content/uploads/2017/08/24/113315-memes-748x421.jpg");
+  position: fixed;
+  text-align: center;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.home__header {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 70px;
+}
+
+p {
+  font-size: 25px;
+  font-weight: bold;
+  f
 }
 
 h2 {
