@@ -1,4 +1,4 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState }from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -9,7 +9,8 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { auth } from "firebase";
+import { auth } from "firebase"
+
 
 
 function Copyright() {
@@ -55,7 +56,7 @@ function SignUp() {
     // const [user, setUser] = useState(null)
 
 
-    const signUp = (event) => {
+    const createUser = (event) => {
         // this will prevent the form from refreshing and losing information
         event.preventDefault()
 
@@ -144,7 +145,7 @@ function SignUp() {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={signUp}
+            onClick={createUser}
             >
             Sign Up
             </Button>
