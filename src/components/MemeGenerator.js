@@ -93,6 +93,7 @@ class MemeGenerator extends React.Component {
                     <h2>{this.state.topText}</h2>
                     <h2>{this.state.bottomText}</h2>
                     <img className="meme__img" style={{width: 500}} src={this.state.randomImg} alt=""/>
+                    <p className="meme__message">screenshot to save :)</p>
                 </div>
             </div>
         )
