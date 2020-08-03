@@ -15,4 +15,4 @@ const firebaseApp = firebase.initializeApp({
     const auth = firebase.auth();
     const storage = firebase.storage();
 
-    export default { auth }
+    export default { auth, db, storage }
