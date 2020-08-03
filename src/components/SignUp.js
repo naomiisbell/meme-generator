@@ -59,7 +59,7 @@ function SignUp() {
         // this will prevent the form from refreshing and losing information
         event.preventDefault()
 
-        auth.createUserWithEmailAndPassword(firstName, lastName, email, password)
+        auth.createUserWithEmailAndPassword(email, password)
         .catch((error) => alert(error.message))
 
     }
