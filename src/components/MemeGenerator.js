@@ -16,6 +16,7 @@ class MemeGenerator extends React.Component {
             apiImgs: [],
             formSubmitted: false,
         }
+        // the bind method is necessary to make 'this' work in my callback 
         this.onTextChange = this.onTextChange.bind(this)
         this.handleSubmission = this.handleSubmission.bind(this)
     }
