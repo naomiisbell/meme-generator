@@ -14,6 +14,8 @@ https://github.com/prescottprue/react-redux-firebase/issues/249
 
 https://colorhunt.co/palette/196113
 
+https://reactjs.org/docs/handling-events.html
+
 PSEUDOCODE 
 
 ** Need to create react router for home page, create page, and profile page
